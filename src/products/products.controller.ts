@@ -9,8 +9,8 @@ export class ProductsController {
 
   @Post("create")
   create(@Body() createProductDto: CreateProductDto) {
-    const result = this.productsService.create(createProductDto);
-    return { message : "Product has been created successfully", data : result };
+    const result1 = this.productsService.create(createProductDto)
+    return result1
   }
 
   @Get()
