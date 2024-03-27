@@ -7,11 +7,11 @@ import { UpdateProductDto } from './dto/update-product.dto';
 export class ProductsController {
   constructor(private readonly productsService: ProductsService) {}
 
-  @Post("create")
-  create(@Body() createProductDto: CreateProductDto) {
-    const result1 = this.productsService.create(createProductDto)
-    return result1
-  }
+  // @Post("create")
+  // create(@Body() createProductDto: CreateProductDto) {
+  //   const result1 = this.productsService.create(createProductDto)
+  //   return result1
+  // }
 
   @Get()
   findAll() {
