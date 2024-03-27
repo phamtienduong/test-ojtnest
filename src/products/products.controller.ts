@@ -7,9 +7,10 @@ import { UpdateProductDto } from './dto/update-product.dto';
 export class ProductsController {
   constructor(private readonly productsService: ProductsService) {}
 
-  @Post()
+  @Post("create")
   create(@Body() createProductDto: CreateProductDto) {
-    return this.productsService.create(createProductDto);
+    const result = this.productsService.create(createProductDto);
+    return { message : "Product has been created successfully", data : result };
   }
 
   @Get()
