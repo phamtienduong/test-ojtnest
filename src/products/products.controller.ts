@@ -13,10 +13,10 @@ export class ProductsController {
   //   return result1
   // }
 
-  @Get()
-  findAll() {
-    return this.productsService.findAll();
-  }
+  // @Get()
+  // findAll() {
+  //   return this.productsService.findAll();
+  // }
 
   @Get(':id')
   findOne(@Param('id') id: string) {
